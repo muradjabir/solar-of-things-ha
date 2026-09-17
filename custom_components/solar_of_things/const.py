@@ -82,6 +82,13 @@ SENSOR_KEYS = [
     "batterySOC",
     "gridPower",
     "loadPower",
+    "acInputVoltage",
+    "acInputFrequency",
+    "pvInputVoltage",
+    "outputVoltage",
+    "outputFrequency",
+    "outputApparentPower",
+    "loadPercentage",
 ]
 
 # ─── Energy-flow fallback mapping ──────────────────────────────────────────────
@@ -257,6 +264,47 @@ SENSOR_DEFINITIONS = {
         "unit": "W",
         "device_class": "power",
         "icon": "mdi:home-lightning-bolt",
+    },
+    "acInputVoltage": {
+        "name": "AC Input Voltage",
+        "unit": "V",
+        "device_class": "voltage",
+        "icon": "mdi:transmission-tower",
+    },
+    "acInputFrequency": {
+        "name": "AC Input Frequency",
+        "unit": "Hz",
+        "device_class": "frequency",
+        "icon": "mdi:sine-wave",
+    },
+    "pvInputVoltage": {
+        "name": "PV Input Voltage",
+        "unit": "V",
+        "device_class": "voltage",
+        "icon": "mdi:solar-power",
+    },
+    "outputVoltage": {
+        "name": "AC Output Voltage",
+        "unit": "V",
+        "device_class": "voltage",
+        "icon": "mdi:power-plug",
+    },
+    "outputFrequency": {
+        "name": "AC Output Frequency",
+        "unit": "Hz",
+        "device_class": "frequency",
+        "icon": "mdi:sine-wave",
+    },
+    "outputApparentPower": {
+        "name": "AC Output Apparent Power",
+        "unit": "VA",
+        "device_class": "apparent_power",
+        "icon": "mdi:flash",
+    },
+    "loadPercentage": {
+        "name": "Load Percentage",
+        "unit": "%",
+        "icon": "mdi:percent",
     },
     # Monthly summary sensors
     "monthly_pv_generated": {
